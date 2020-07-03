@@ -1,0 +1,338 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.container{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Nav bar */
+
+#navbar{
+    position: relative;
+    
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+
+
+#navbar::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 1;
+    position: absolute;
+    z-index: -1;
+}
+
+#logo{
+    margin: 10px 30px;
+    cursor: pointer;
+    
+}
+
+#logo img{
+    width: 50px;
+    height: 50px;
+}
+
+#navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    
+}
+
+#navbar ul li{
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 3px 25px;
+
+}
+
+#navbar ul li a:hover{
+    background-color: rgb(54, 114, 226);
+    border-radius: 50px;
+    font-size: 1.3rem;
+    padding: 5px;  /* Due to padding the popup effect*/
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px greenyellow;
+}
+
+
+/* home section*/
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10%;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#home::before{
+    content:"";
+    position: absolute;
+    z-index: -1;
+    width: 80%;
+    margin-left: 10%;
+    height: 100%;
+    background-image: url(bg1.webp);
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+
+}
+
+.h-primary{
+    font-size: 2.4rem;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.h-secondary{
+    font-size: 2.4rem;
+    padding: 10px;
+    text-align: center;
+}
+
+#home p{
+    text-align: center;
+    color: rgb(14, 4, 58);
+}
+
+.btn{
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 35px;
+}
+
+.btn:hover{
+    background-color: rgb(54, 114, 226);
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 35px;
+    cursor: pointer;
+}
+
+/* services*/
+
+
+#service-container .h-primary:hover{
+    text-decoration: underline;
+}
+#service-container{
+    margin: 120px 0 50px 0;
+}
+#services{
+    position: relative;
+    display: flex;
+}
+.center{
+    text-align: center;
+}
+
+/* #services .box{
+    border: 1px dotted black;
+    border-radius: 5%;
+    margin: 5px;
+    display: block;
+    
+} */
+
+#services  img{
+    display: block;
+    height: 160px;
+    margin: auto;
+
+}
+
+#services .box1,#services .box2,#services .box3{
+    
+    border-radius: 5%;
+    margin: 5px;
+    color: blanchedalmond;
+    position: relative;
+}
+
+#services .box1::before, #services .box2::before,#services .box3::before{
+    content: "";
+    position: absolute;
+    background-color: crimson;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+
+
+
+/* Client section*/
+
+#cli-section .h-primary:hover{
+    text-decoration: underline;
+}
+
+#cli-section{
+    position: relative;
+}
+
+#cli-section .h-primary{
+    margin: 10px 0px 100px 0px;
+}
+
+#client::before{
+    content: "";
+    background-image: url(./contact.webp);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius:20px;
+    margin-top: 10px;
+
+
+}
+
+#client{
+    display: flex;
+    margin: 35px;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+#client img{
+    width: 100px;
+    border-radius:100%;
+
+}
+
+
+/* contact section*/
+
+#contact .h-primary:hover{
+    text-decoration: underline;
+}
+
+#contact{
+
+    position: relative;
+}
+ 
+#contact .h-primary{
+    margin: 120px 0;
+}
+
+ #contact-box::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background-image: url(./images/conta.webp);
+    background-position: center;
+    background-size: cover;
+    
+ }
+
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#contact-box input, #contact-box textarea{
+
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0 9px ;
+    font-size: 1.2rem;
+}
+
+#contact-box input:hover, #contact-box textarea:hover{
+    background-color: rgba(75, 68, 68, 0.424);
+    color: rgb(79, 22, 133);
+}
+
+#contact-box form,#contact-box label{
+
+    width: 40%;
+    font-size: 1.3rem;
+}
+
+#contact-box .btn{
+    padding: 5px;
+    float: right;
+    border: 2px solid gray;
+}
+
+/* Footer section*/
+footer{
+    
+    margin: 80px 0 0 0;
+    background-color: gray;
+    padding: 6px;
+}
+
+footer:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+@media(max-width:  768px) {
+    #services{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    } 
+
+}
+
+@media (max-width:446px){
+    .h-primary{
+        font-size: 1.2rem;
+        color: rgb(39, 30, 31);
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .h-secondary{
+        font-size: 1rem;
+        padding: 10px;
+        text-align: center;
+    }
+}
