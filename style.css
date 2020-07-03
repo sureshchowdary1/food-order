@@ -1,18 +1,24 @@
+/* Till 300px width Css is working perfect after 300px service img2 poping out of bondries and home section content is going beyond the navbar and so on*/
+
 *{
     margin:0;
     padding: 0;
 }
 
-.container{
+ .container{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-}
+} 
 
 /* Nav bar */
 
 #navbar{
-    position: relative;
+    position: fixed;
+    width: 80%;
+    opacity: 0.8;
+    height: 70px;
+    z-index: 2;
     
 }
 
@@ -29,7 +35,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     opacity: 1;
     position: absolute;
     z-index: -1;
@@ -38,12 +44,17 @@
 #logo{
     margin: 10px 30px;
     cursor: pointer;
+    position: relative;
     
 }
 
 #logo img{
     width: 50px;
     height: 50px;
+    /* border-bottom-left-radius: 35px;
+    border-top-right-radius: 10px; */
+    border-radius: 0px 10px 0px 35px;
+    
 }
 
 #navbar ul{
@@ -60,7 +71,7 @@
 #navbar ul li a{
     text-decoration: none;
     color: whitesmoke;
-    padding: 3px 25px;
+    padding: 10px;
 
 }
 
@@ -73,6 +84,13 @@
     cursor: pointer;
     box-shadow: 0 0 10px greenyellow;
 }
+
+.toggle-btn span{
+    display: none;
+}
+
+
+
 
 
 /* home section*/
@@ -93,7 +111,11 @@
     width: 80%;
     margin-left: 10%;
     height: 100%;
-    background-image: url(bg1.webp);
+    background-image: url(./images/bg3.webp);
+    background-position: center;
+    background-size: cover;
+    align-content: center;
+    align-items: center;
     opacity: 0.7;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,6 +129,7 @@
     font-size: 2.4rem;
     padding: 10px;
     text-align: center;
+    margin-top: 150px;
     margin-bottom: 20px;
 }
 
@@ -114,6 +137,8 @@
     font-size: 2.4rem;
     padding: 10px;
     text-align: center;
+    
+    
 }
 
 #home p{
@@ -127,6 +152,9 @@
     font-size: 1rem;
     padding: 5px;
     margin: 35px;
+
+    border-inline-start-color: rgb(233, 12, 196);
+    border-inline-end-color: rgb(119, 8, 86) ;
 }
 
 .btn:hover{
@@ -136,6 +164,9 @@
     padding: 5px;
     margin: 35px;
     cursor: pointer;
+   border: 3px solid black;
+    border-inline-start-color: rgb(255, 255, 255);
+    border-inline-end-color: rgb(253, 253, 253) ;
 }
 
 /* services*/
@@ -245,7 +276,9 @@
 #contact{
 
     position: relative;
+    
 }
+
  
 #contact .h-primary{
     margin: 120px 0;
@@ -258,9 +291,10 @@
     height: 100%;
     z-index: -1;
     opacity: 0.7;
-    background-image: url(./images/conta.webp);
+    background-image: url(./images/contact.webp);
     background-position: center;
     background-size: cover;
+
     
  }
 
@@ -278,6 +312,7 @@
     padding: 0.5rem;
     border-radius: 0 9px ;
     font-size: 1.2rem;
+    
 }
 
 #contact-box input:hover, #contact-box textarea:hover{
@@ -291,23 +326,60 @@
     font-size: 1.3rem;
 }
 
-#contact-box .btn{
+#contact-box .btn-sub{
     padding: 5px;
     float: right;
-    border: 2px solid gray;
+    border: 3px solid gray;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 35px;
+
+    border-inline-start-color: rgb(253, 8, 8);
+    border-inline-end-color: rgb(253, 8, 8) ;
+    /* border-block-end: rgb(114, 216, 12); */
+    border-block-start: lawngreen;
+    
 }
+
+#contact-box .btn-sub:hover{
+    background-color: rgba(14, 85, 218, 0.623);
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 35px;
+    cursor: pointer;
+   border: 3px solid gray;
+    border-inline-start-color: rgb(2, 2, 2);
+    border-inline-end-color: rgb(0, 0, 0) ;
+    
+    border-block-start: lawngreen;
+}
+
+
 
 /* Footer section*/
 footer{
     
-    margin: 80px 0 0 0;
+    margin: 90px 0 0 0;
     background-color: gray;
     padding: 6px;
+    border-radius: 5px 5px;
+    border: 3px solid gray;
 }
 
 footer:hover{
     background-color: black;
     color: white;
+    
+    
+    border-block-end: lawngreen;
+    border-block-start: lawngreen;
+    border-inline-start-color: gray;
+    border-inline-end-color: gray;
+
+
 }
 
 
@@ -336,3 +408,68 @@ footer:hover{
         text-align: center;
     }
 }
+
+    
+    
+@media(max-width:910px){
+    
+    
+    #sidebar{
+        position: fixed;
+        width: 25%;
+        right: -30%;
+        top: 1px;
+        background-color: blue;
+        opacity: 1;
+        color: white;
+        height: 60%;
+        
+        
+    }
+    
+    #sidebar li{
+        position: relative;
+        color: wheat;
+        font-size: 1.5rem;
+        padding: 20px;
+        width: 100%;
+        border-bottom: 1px solid white;
+        text-align: center;
+        list-style: none;
+        cursor: pointer;
+        top: 70px;
+        z-index: 2;
+        transition: .5s ease-in-out;
+    }
+    
+    #sidebar li:nth-child(5){
+        border-bottom: none;
+    }
+
+    .toggle-btn{
+        position: fixed;
+        width: 5px;
+        right: 15%;
+        top: 0px;
+        
+        cursor: pointer;
+    }
+    
+    .toggle-btn span{
+        display: inline-block;
+        background-color: white;
+        width: 30px;
+        height: 5px;
+        border-radius:3px;
+        color: wheat;
+        
+    }
+    
+    #sidebar.active{
+        right:  10%;
+    }
+     
+    
+     
+    }
+ 
